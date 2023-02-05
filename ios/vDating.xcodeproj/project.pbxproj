@@ -16,6 +16,7 @@
 		400EB2C1E1807E6CBC68B7AB /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951E59D51E504BC9C5F46169 /* ExpoModulesProvider.swift */; };
 		459DF44758DDDEF159E455BA /* libPods-vDating.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFF90003F60DF0FCB9F3E3B2 /* libPods-vDating.a */; };
 		BE406F562862D73000A81E39 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE406F552862D73000A81E39 /* BootSplash.storyboard */; };
+		D65B933B298FEBB8002FF2DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D65B933A298FEBB8002FF2DC /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		9C489D3A55C267905D1EFD05 /* Pods-vDating-vDatingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vDating-vDatingTests.debug.xcconfig"; path = "Target Support Files/Pods-vDating-vDatingTests/Pods-vDating-vDatingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE406F552862D73000A81E39 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = vDating/BootSplash.storyboard; sourceTree = "<group>"; };
 		D5AFED2E09CC2E86D1338C0F /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-vDating-vDatingTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		D65B933A298FEBB8002FF2DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FFF90003F60DF0FCB9F3E3B2 /* libPods-vDating.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-vDating.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -90,6 +92,7 @@
 		13B07FAE1A68108700A75B9A /* vDating */ = {
 			isa = PBXGroup;
 			children = (
+				D65B933A298FEBB8002FF2DC /* GoogleService-Info.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -274,6 +277,7 @@
 			files = (
 				BE406F562862D73000A81E39 /* BootSplash.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				D65B933B298FEBB8002FF2DC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

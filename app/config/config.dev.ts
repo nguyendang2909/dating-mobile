@@ -7,4 +7,6 @@
  */
 export default {
   API_URL: 'https://vdatingapi.mttn.vn',
+  GOOGLE_WEB_CLIENT_ID:
+    '1073213514255-g4eu0sa9iasjefkd683ju7dmqtfn3gv7.apps.googleusercontent.com',
 };
