@@ -2,7 +2,7 @@
 
 - React Native
 - React Navigation
-- MobX State Tree
+- Redux
 - TypeScript
 - And more!
 
@@ -83,7 +83,7 @@ This is where your reusable components live which help you build your screens.
 This is where your translations will live if you are using `react-native-i18n`.
 
 **models**
-This is where your app's models will live. Each model has a directory which will contain the `mobx-state-tree` model file, test file, and any other supporting files like actions, types, etc.
+This is where your app's models will live. Each model has a directory which will contain the `redux` model file, test file, and any other supporting files like actions, types, etc.
 
 **navigators**
 This is where your `react-navigation` navigators will live.

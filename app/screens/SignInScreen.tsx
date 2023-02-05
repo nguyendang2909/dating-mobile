@@ -1,5 +1,4 @@
 import { StackScreenProps } from '@react-navigation/stack';
-import { observer } from 'mobx-react-lite';
 import React, { FC } from 'react';
 import { ViewStyle } from 'react-native';
 
@@ -17,19 +16,20 @@ import { AppStackScreenProps } from '../navigators';
 
 // REMOVE ME! ⬇️ This TS ignore will not be necessary after you've added the correct navigator param type
 // @ts-ignore
-export const SignInScreen: FC<StackScreenProps<AppStackScreenProps, 'SignIn'>> =
-  observer(function SignInScreen() {
-    // Pull in one of our MST stores
-    // const { someStore, anotherStore } = useStores()
+export const SignInScreen: FC<
+  StackScreenProps<AppStackScreenProps, 'SignIn'>
+> = () => {
+  // Pull in one of our MST stores
+  // const { someStore, anotherStore } = useStores()
 
-    // Pull in navigation via hook
-    // const navigation = useNavigation()
-    return (
-      <Screen style={$root} preset="scroll">
-        <Text text="signIn" />
-      </Screen>
-    );
-  });
+  // Pull in navigation via hook
+  // const navigation = useNavigation()
+  return (
+    <Screen style={$root} preset="scroll">
+      <Text text="signIn" />
+    </Screen>
+  );
+};
 
 const $root: ViewStyle = {
   flex: 1,

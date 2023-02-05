@@ -1,4 +1,3 @@
-import { observer } from 'mobx-react-lite';
 import React, { FC } from 'react';
 import { Image, ImageStyle, TextStyle, View, ViewStyle } from 'react-native';
 
@@ -10,7 +9,7 @@ import { useSafeAreaInsetsStyle } from '../utils/useSafeAreaInsetsStyle';
 const welcomeLogo = require('../../assets/images/logo.png');
 const welcomeFace = require('../../assets/images/welcome-face.png');
 
-export const WelcomeScreen: FC = observer(function WelcomeScreen() {
+export const WelcomeScreen: FC = () => {
   const $bottomContainerInsets = useSafeAreaInsetsStyle(['bottom']);
 
   return (
@@ -32,7 +31,7 @@ export const WelcomeScreen: FC = observer(function WelcomeScreen() {
       </View>
     </View>
   );
-});
+};
 
 const $container: ViewStyle = {
   flex: 1,

@@ -13,12 +13,9 @@
  * @refresh reset
  */
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { onSnapshot } from 'mobx-state-tree';
 import { Platform } from 'react-native';
 import { ArgType } from 'reactotron-core-client';
-import { mst } from 'reactotron-mst';
 
-import { RootStore } from '../../models/RootStore';
 import {
   goBack,
   navigate,
@@ -67,7 +64,7 @@ const config = DEFAULT_REACTOTRON_CONFIG;
  *
  * @param rootStore The root store
  */
-export function setReactotronRootStore(rootStore: RootStore, initialData: any) {
+export function setReactotronRootStore(initialData: any) {
   if (__DEV__) {
     const { logInitialState, logSnapshots } = config;
     const name = 'ROOT STORE';
@@ -83,13 +80,13 @@ export function setReactotronRootStore(rootStore: RootStore, initialData: any) {
 
     // log state changes?
     if (logSnapshots) {
-      onSnapshot(rootStore, snapshot => {
-        Reactotron.display({ name, value: snapshot, preview: 'New State' });
-      });
+      // onSnapshot(rootStore, snapshot => {
+      //   Reactotron.display({ name, value: snapshot, preview: 'New State' });
+      // });
     }
 
-    // tracks the current MobX-State-Tree tree in Reactotron's "State" tab
-    Reactotron.trackMstNode(rootStore);
+    // tracks the current redux tree in Reactotron's "State" tab
+    // Reactotron.trackMstNode(rootStore);
   }
 }
 
@@ -124,15 +121,8 @@ export function setupReactotron(customConfig: ReactotronConfig = {}) {
       });
     }
 
-    // ignore some chatty `mobx-state-tree` actions
+    // ignore some chatty `redux` actions
     const RX = /postProcessSnapshot|@APPLY_SNAPSHOT/;
-
-    // hookup mobx-state-tree middleware
-    Reactotron.use(
-      mst({
-        filter: event => RX.test(event.name) === false,
-      }),
-    );
 
     // connect to the app
     Reactotron.connect();

@@ -11,7 +11,6 @@ import {
 } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StackScreenProps } from '@react-navigation/stack';
-import { observer } from 'mobx-react-lite';
 import React from 'react';
 import { useColorScheme } from 'react-native';
 
@@ -24,7 +23,6 @@ import { navigationRef, useBackButtonHandler } from './navigationUtilities';
  * as well as what properties (if any) they might take when navigating to them.
  *
  * If no params are allowed, pass through `undefined`. Generally speaking, we
- * recommend using your MobX-State-Tree store(s) to keep application state
  * rather than passing state through navigation params.
  *
  * For more information, see this documentation:
@@ -50,21 +48,19 @@ export type AppStackScreenProps<T extends keyof AppStackParamList> =
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
 const Stack = createNativeStackNavigator<AppStackParamList>();
 
-const AppStack = observer(function AppStack() {
+const AppStack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Welcome" component={WelcomeScreen} />
       {/** 🔥 Your screens go here */}
     </Stack.Navigator>
   );
-});
+};
 
 interface NavigationProps
   extends Partial<React.ComponentProps<typeof NavigationContainer>> {}
 
-export const AppNavigator = observer(function AppNavigator(
-  props: NavigationProps,
-) {
+export const AppNavigator = (props: NavigationProps) => {
   const colorScheme = useColorScheme();
 
   useBackButtonHandler(routeName => exitRoutes.includes(routeName));
@@ -78,4 +74,4 @@ export const AppNavigator = observer(function AppNavigator(
       <AppStack />
     </NavigationContainer>
   );
-});
+};
