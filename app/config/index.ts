@@ -23,6 +23,4 @@ if (__DEV__) {
   ExtraConfig = DevConfig;
 }
 
-const Config = { ...BaseConfig, ...ExtraConfig };
-
-export default Config;
+export const Config = { ...BaseConfig, ...ExtraConfig };

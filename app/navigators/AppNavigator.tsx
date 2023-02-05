@@ -15,7 +15,7 @@ import { observer } from 'mobx-react-lite';
 import React from 'react';
 import { useColorScheme } from 'react-native';
 
-import Config from '../config';
+import { Config } from '../config';
 import { WelcomeScreen } from '../screens';
 import { navigationRef, useBackButtonHandler } from './navigationUtilities';
 
@@ -34,6 +34,7 @@ import { navigationRef, useBackButtonHandler } from './navigationUtilities';
  */
 export type AppStackParamList = {
   Welcome: undefined;
+  SignIn: undefined;
   // 🔥 Your screens go here
 };
 

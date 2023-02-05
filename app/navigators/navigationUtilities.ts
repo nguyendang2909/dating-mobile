@@ -7,7 +7,7 @@ import {
 import { useEffect, useRef, useState } from 'react';
 import { BackHandler, Platform } from 'react-native';
 
-import Config from '../config';
+import { Config } from '../config';
 import type { PersistNavigationConfig } from '../config/config.base';
 import { useIsMounted } from '../utils/useIsMounted';
 
