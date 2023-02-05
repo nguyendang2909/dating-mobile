@@ -1,7 +1,8 @@
+import { useNavigation } from '@react-navigation/native';
 import React, { FC } from 'react';
 import { Image, ImageStyle, TextStyle, View, ViewStyle } from 'react-native';
 
-import { Text } from '../components';
+import { Button, Text } from '../components';
 import { isRTL } from '../i18n';
 import { colors, spacing } from '../theme';
 import { useSafeAreaInsetsStyle } from '../utils/useSafeAreaInsetsStyle';
@@ -11,6 +12,8 @@ const welcomeFace = require('../../assets/images/welcome-face.png');
 
 export const WelcomeScreen: FC = () => {
   const $bottomContainerInsets = useSafeAreaInsetsStyle(['bottom']);
+
+  const navigation = useNavigation();
 
   return (
     <View style={$container}>
@@ -24,6 +27,7 @@ export const WelcomeScreen: FC = () => {
         />
         <Text tx="welcomeScreen.exciting" preset="subheading" />
         <Image style={$welcomeFace} source={welcomeFace} resizeMode="contain" />
+        <Button onPress={() => navigation.navigate('SignIn')}>Sign In`</Button>
       </View>
 
       <View style={[$bottomContainer, $bottomContainerInsets]}>

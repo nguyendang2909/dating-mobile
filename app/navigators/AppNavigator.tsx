@@ -15,7 +15,7 @@ import React from 'react';
 import { useColorScheme } from 'react-native';
 
 import { Config } from '../config';
-import { WelcomeScreen } from '../screens';
+import { SignInScreen, WelcomeScreen } from '../screens';
 import { navigationRef, useBackButtonHandler } from './navigationUtilities';
 
 /**
@@ -52,6 +52,7 @@ const AppStack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Welcome" component={WelcomeScreen} />
+      <Stack.Screen name="SignIn" component={SignInScreen} />
       {/** 🔥 Your screens go here */}
     </Stack.Navigator>
   );
